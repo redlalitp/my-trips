@@ -1,0 +1,32 @@
+.wrapper {
+    background-color: #242d3c;
+    color: #d5d7dc;
+    height: 1080px;
+}
+
+.trip-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+}
+
+.trips-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    button {
+        height: 40px;
+        width: 40px;
+        font-weight: bold;
+        background-color: #ee0177;
+        color: #242d3c;
+        border:0;
+    }
+
+    h1 {
+        color: #ee0177 ;
+        font-family: 'Indie Flower', cursive;
+    }
+}

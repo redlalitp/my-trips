@@ -1,0 +1,13 @@
+<div class="card-container shadow">
+    <div class="trip-media">
+        <img src={{image-source @destination}} alt="Boulder"/>
+    </div>
+    <div class="card-body">
+        <div class="destination-text">
+            {{@destination}}
+        </div>
+        <div class="date-text">
+            {{moment-format @date 'MM/DD/YYYY'}}
+        </div>
+    </div>
+</div>

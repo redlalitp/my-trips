@@ -1,0 +1,32 @@
+<div class="wrapper">
+    
+   <div class="trips-header">
+        <h1>you have been to...</h1>
+    </div>
+    <div class="trip-cards-wrapper">
+     <!--<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>Destination</th>
+        <th>From</th>
+        <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each model as |trip|}}
+        <tr>
+        <td>{{trip.destinationCity}}</td>
+        <td>{{trip.sourceCity}}</td>
+        <td>{{trip.startDate}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+    </table>-->
+    {{#each model as |trip|}}
+        <LinkTo @route="trip" @model={{trip.id}}>
+            {{trip-card destination=trip.destinationCity date=trip.startDate}}
+        </LinkTo>
+    {{/each}}
+    
+    </div>
+</div>

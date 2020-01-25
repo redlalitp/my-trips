@@ -1,0 +1,63 @@
+.card-container {
+    display: grid;
+    grid-template-rows: 200px 100px;
+    width: 300px;
+    margin: 20px;
+    background-color:	#4f5662;
+}
+
+.trip-media {
+    grid-row: 1/2;
+    height:inherit;
+    width: inherit;
+    overflow:auto;
+    
+    img {
+        object-fit: cover;
+        height: inherit;
+        width: inherit;
+        opacity: 0.4;
+        -webkit-transition: opacity 1s ease-out;
+        -moz-transition: opacity 1s ease-out;
+        -ms-transition: opacity 1s ease-out;
+        -o-transition: opacity 1s ease-out;
+        transition: opacity 1s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    
+
+}
+
+.card-body {
+    grid-row: 2/3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-text {
+    color: black;
+}
+
+.destination-text {
+    color: #ffa400;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.date-text {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: right;
+    opacity: 0.3;
+    font-family: 'Pacifico', cursive;;
+}
+
+.shadow {
+    -moz-box-shadow:    3px 3px 4px 0px rgb(0, 0, 0);
+    -webkit-box-shadow: 3px 3px 4px 0px rgb(0, 0, 0);
+    box-shadow:         3px 3px 4px 0px rgb(0, 0, 0);
+  }

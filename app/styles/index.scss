@@ -1,0 +1,117 @@
+
+.main-wrapper {
+    display:grid;
+    grid-template-areas: 'main-header'
+                         'content';
+    height: 1080px;
+    grid-template-rows: 75px 1fr;
+    background-image: url("images/_DSC0733.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+    padding-left: 30%;
+    padding-top: 40px;
+    height: 250px;
+    grid-gap: 10px;
+    grid-area: "content";
+}
+
+.main-header {
+    grid-area: "main-header";
+    color: #cf7200;
+    font-size: 48px;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.welcome-text {
+    grid-column: 1/4;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.section-tile1 {
+    opacity: 0.5;
+    font-size: 24px;
+    color: navy;
+    vertical-align: middle;
+
+    &:hover {
+        opacity: 1.0;
+    }
+
+    img {
+        width: 96px;
+        height: 96px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-tile2 {
+    opacity: 0.5;
+    font-size: 24px;
+    color: navy;
+    vertical-align: middle;
+
+    &:hover {
+        opacity: 1.0;
+    }
+
+    img {
+        width: 96px;
+        height: 96px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-tile3 {
+    opacity: 0.5;
+    font-size: 24px;
+    color: navy;
+    vertical-align: middle;
+
+    &:hover {
+        opacity: 1.0;
+    }
+
+    img {
+        width: 96px;
+        height: 96px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-tile-text1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(114, 0, 0);
+
+}
+
+.section-tile-text2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(114, 0, 0);
+}
+
+.section-tile-text3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(114, 0, 0);
+}
