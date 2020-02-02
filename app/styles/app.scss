@@ -3,13 +3,16 @@
 @import 'index.scss';
 @import 'trips.scss';
 @import 'components/trip-card.scss';
+@import 'components/add-trip.scss';
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 
 body {
     height: 100%;
-    
+    width: 100%;
 }
 
 

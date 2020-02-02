@@ -2,7 +2,17 @@
     
    <div class="trips-header">
         <h1>you have been to...</h1>
+        <button {{action (action "toggleModal")}}>+</button>
     </div>
+    {{#if isShowingModal}}
+    {{#modal-dialog
+        onClose=(action "toggleModal")
+        targetAttachment="center"
+        translucentOverlay=true
+    }}
+        {{add-trip}}
+    {{/modal-dialog}}
+    {{/if}}
     <div class="trip-cards-wrapper">
      <!--<table class="table table-bordered table-striped">
     <thead>

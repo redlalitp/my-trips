@@ -1,0 +1,64 @@
+<div class="dialog-wrapper">
+    <h1>Add New Trip</h1>
+    <table>
+        <tr>
+            
+        </tr>
+        <tr>
+            <td><img src="assets/icons/svg/home.svg"></td>
+            <td><label>Origin </label></td>
+            <td><input class="text-field" type="text" id="origin"/></td>
+        </tr>
+        <tr>
+            <td><img src="assets/icons/svg/location.svg"></td>
+            <td><label>Destination </label></td>
+            <td><input class="text-field" type="text" id="destination"/></td>
+        </tr>
+        <tr>
+            <td><img src="assets/icons/svg/calendar.svg"></td>
+            <td><label>Date Started </label></td>
+            <td><input class="text-field" type="date" id="from-date"/></td>
+        </tr>
+        <tr>
+            <td><img src="assets/icons/svg/random.svg"></td>
+            <td><label>Travel Mode </label></td>
+            <td class="travel-radio">
+                <input onchange={{action "toggleDepartureTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-air" value="flight" name="departure-travel-mode" checked/><label>Air</label>
+                <input onchange={{action "toggleDepartureTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-road" value="road" name="departure-travel-mode"/><label>Road</label>
+                <input onchange={{action "toggleDepartureTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-water" value="water" name="departure-travel-mode"/><label>Water</label>
+            </td>
+        </tr>
+        <tr class="flight-details {{if this.isDepartureTravelModeAir '' 'flight-details--hide'}}">
+            <td><img src="assets/images/airplane.png"></td>
+            <td><label>Flight Number </label>
+            <input class="text-field" type="text" id="departure-flight-number"/></td>
+            <td><label>Carrier </label>
+            <input class="text-field" type="text" id="departure-flight-carrier"/></td>
+        </tr>
+        <tr>
+            <td><img src="assets/icons/svg/calendar.svg"></td>
+            <td><label>Date Returned </label></td>
+            <td><input class="text-field" type="date" id="to-date"/></td>
+        </tr>
+        <tr>
+            <td><img style="transform: scaleX(-1);" src="assets/icons/svg/random.svg"></td>
+            <td><label>Travel Mode </label></td>
+            <td class="travel-radio">
+                <input onchange={{action "toggleReturningTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-air" value="flight" name="returning-travel-mode" checked/><label>Air</label>
+                <input onchange={{action "toggleReturningTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-road" value="road" name="returning-travel-mode"/><label>Road</label>
+                <input onchange={{action "toggleReturningTravelModeAirDetails" value='target.value'}} type="radio" id="travel-mode-water" value="water" name="returning-travel-mode"/><label>Water</label>
+            </td>
+        </tr>
+        <tr class="flight-details {{if this.isReturningTravelModeAir '' 'flight-details--hide'}}">
+            <td></td>
+            <td><label>Flight Number </label>
+            <input class="text-field" type="text" id="returning-flight-number"/></td>
+            <td><label>Carrier </label>
+            <input class="text-field" type="text" id="returning-flight-carrier"/></td>
+        </tr>
+        
+    </table>
+
+    <button {{action 'saveTrip'}}>Add</button>
+    <button onclick="">Cancel</button>
+</div>

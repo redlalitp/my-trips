@@ -1,4 +1,10 @@
-import Controller from '@ember/controller';
+import Ember from 'ember';
 
-export default class TripsController extends Controller {
-}
+export default Ember.Controller.extend({
+    isShowingModal: false,
+    actions: {
+        toggleModal: function() {
+            this.toggleProperty('isShowingModal');
+        },
+    }
+});

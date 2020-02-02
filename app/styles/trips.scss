@@ -2,6 +2,13 @@
     background-color: #242d3c;
     color: #d5d7dc;
     height: 1080px;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .trip-cards-wrapper {
