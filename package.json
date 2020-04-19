@@ -62,5 +62,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "rellax": "^1.12.0"
   }
 }

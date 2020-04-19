@@ -17,7 +17,7 @@ module.exports = function(defaults) {
       'importBootstrapCSS': false
     }
   });
-  
+  app.import('vendor/rellax.min.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

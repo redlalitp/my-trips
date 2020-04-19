@@ -1,12 +1,40 @@
-<div class="main-wrapper">
-    <div class="main-header">
-        HOME
-    </div>
-    <div class="content">
-        
-        <div class="welcome-text">
-            What would you want to see?
+<div class="background">
+    <!---->
+
+</div>
+<div id="text-id" class="text"></div>
+<div id="subject" class="parallax-el"></div>
+<div id="clouds-id" class="clouds"></div>
+<div id="front-clouds-id" class="front-clouds"></div>
+<div class="white-space"></div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-4 text-container">
+            <h1>VAC</h1>
+            <h1>ATI</h1>
+            <h1>ONS</h1>
         </div>
+        <div class="col-md-8 img-container">
+            <div class="row">
+                <div class="col-md-3 img-small shadow">
+                    {{#link-to 'trips'}}
+                        <img src="assets/images/vacation.png" alt="trips">
+                    {{/link-to}}
+                </div>
+                <div class="col-md-3 img-small shadow">
+                    {{#link-to 'photos'}}
+                        <img src="assets/images/photos.png" alt="photos">
+                    {{/link-to}}
+                </div>
+                <div class="col-md-3 img-small shadow">
+                    {{#link-to 'stats'}}
+                        <img src="assets/images/stats_1.jpg" alt="stats">
+                    {{/link-to}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="content-links">
         <div class="section-tile1">
             {{#link-to 'trips'}}
                 <img src="assets/images/airplane.png" alt="should be fu*r" />
@@ -31,5 +59,25 @@
         <div class="section-tile-text3">
             Stats
         </div>
-    </div>
+    </div>-->
 </div>
+
+<script>
+    function parallaxY(el, distance, speed) {
+        const item = document.querySelector(el);
+        item.style.transform = `translateY(${distance * speed}px)`;
+    }
+
+    function scaleTrans(el, distance, speed) {
+        const item = document.querySelector(el);
+        var size_scale = 1 + distance * (speed/100);
+        item.style.transform = `scale(${size_scale})`;
+    }
+
+    window.addEventListener("scroll", function() {
+        parallaxY(".background", window.scrollY,0.7);
+        parallaxY(".text", window.scrollY,0.5);
+        parallaxY(".clouds", window.scrollY,0.8);
+        parallaxY(".front-clouds", window.scrollY,0.7);
+    });
+</script>
